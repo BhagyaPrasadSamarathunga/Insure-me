@@ -1,0 +1,28 @@
+.choice-buttons {
+    display: flex;
+    min-width: 50%;
+    max-width: 225px;
+    margin: 5px;
+    flex-direction: row;
+    
+}
+.choice-buttons:hover {
+    background: rgb(216, 225, 243);
+}
+.choice-button-label {
+background-color: rgb(94, 198, 247);
+display: block; 
+width: 20px;
+height: 20px;
+margin-right: 5px;
+border-color: white;
+border-width: 5px;
+color: white;
+}
+/* button:hover{
+    background: #383;
+} */
+.choice-button-select{
+margin-left: auto; 
+margin-right: 0;
+}
