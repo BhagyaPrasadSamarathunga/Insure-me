@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import LauncherScreen from './features/launcher/LauncherScreen';
 import Questionnaire from './features/home/Questionnaire';
+import End from './features/home/End';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LauncherScreen />} />
           <Route path="/Questionnaire" element={<Questionnaire />} />
+          <Route path="/end" element={<End />} />
         </Routes>
         <Footer />
       </Router>

@@ -21,9 +21,8 @@ const MultipleChoiceQuestion = ({question, onSelectAnswer}) => {
     }
 
 return (
-    <div>
-        <div style={{margin:'5px'}}>{question.headline}</div>
-        <div>
+    <div style={{alignItems:'flex-start', display:'flex', flexDirection:'column'}}>
+        <div style={{ width:'100%'}}>
         {choice && choice.map((item,index) => {
                     return  <Choice id={index} choice={item} selectedChoice={selectedChoice} onChoiceClick={(id)=>handdleSelectedChoice(id)}/>;
                 })}

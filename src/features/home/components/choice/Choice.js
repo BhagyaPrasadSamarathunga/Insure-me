@@ -1,10 +1,12 @@
 import React, { useState,useEffect } from 'react';
 import { AiOutlineCheck } from 'react-icons/ai';
 
+import {indexToAlpha} from '../../../../helper/utils'
+
 const Choice = ({id, choice, selectedChoice, onChoiceClick}) => {
 
      const [isSelected,setSelectedStatus]= useState(false);
-    
+
     useEffect(() => {
         const showHideClicable = ()=> {
             if (selectedChoice === id){
@@ -19,8 +21,8 @@ const Choice = ({id, choice, selectedChoice, onChoiceClick}) => {
 
     return(
     <div> 
-        <button className='App-button choice-buttons ' onClick={() => {onChoiceClick(id)}}>
-            <label className='choice-button-label'>A</label>
+        <button className='choice-buttons ' onClick={() => {onChoiceClick(id)}}>
+            <label className='choice-button-label'>{indexToAlpha(id)}</label>
             {choice.label}
             {
             isSelected? 

@@ -34,14 +34,18 @@ const Question = ({question,onSelectAnswer}) => {
                 return <MultipleChoiceQuestion question={question} onSelectAnswer={(answer)=>handleAnswer(answer)} />
 
             case 'text':
-                return <FreeTextQuesion question={question}/>
+                return <FreeTextQuesion question={question} onSelectAnswer={(answer)=>handleAnswer(answer)}/>
         }
     }
 
 return (
     <div className='App-question'>
         <CSSTransition in={showTransition} timeout={300} classNames="example" unmountOnExit>
-        {renderQuestion()}
+            <div>
+            <div className='App-question-title' style={{margin:'5px',alignItems:'flex-start', textAlign:'left', marginBottom:'50px'}}>{question.headline}</div>
+                {renderQuestion()}
+            </div>
+        
         </CSSTransition>
     </div>
 )

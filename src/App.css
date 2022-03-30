@@ -51,12 +51,35 @@
 }
 
 .App-question {
-  background-color: #daeaf8;
-  border: 1px solid #0a0000;
-  color: rgb(12, 1, 1);
   flex: 1;
   margin-top: 2px;
   width: 60%;
+  align-items: center;
+  justify-self: center;
+}
+
+.App-input {
+  background-color: #9dc9ec;
+  border: 1px solid #ffffff;
+  color: rgb(12, 1, 1);
+  padding: 10px;
+  width:'100%';
+  min-height: 100px;
+}
+
+.App-footer {
+  height:'50px';
+  display:'flex'; 
+  background-color:#19639F;
+  position:'absolute';
+  bottom:0; width:'100%';
+  color:'white'; 
+  justify-self: 'center';
+  align-self:'center';
+}
+
+.App-question-title {
+  color: #19639F;
 }
 
 @keyframes App-logo-spin {
